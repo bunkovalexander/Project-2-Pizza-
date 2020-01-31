@@ -8,6 +8,14 @@ body {
   padding-right: 15px;
   min-width: 1170px;
   margin: 0 auto;
+  position: relative;
+}
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 36px;
+  padding-bottom: 40px;
 }
 .nav {
   display: flex;
@@ -15,12 +23,22 @@ body {
   padding-left: 0;
   font-weight: 700;
   text-transform: uppercase;
+  margin-bottom: 0;
 }
 .nav > li {
   padding-left: 23px;
   margin-left: 22px;
   position: relative;
 }
+
+.nav > li:first-child::before {
+  display: none;
+}
+.nav > li:first-child {
+  padding: 0;
+  margin: 0;
+}
+
 .nav > li::before {
   content: "";
   display: block;
@@ -33,4 +51,28 @@ body {
 .nav > li > a {
   text-decoration: none;
   color: #494949;
+}
+.banner {
+  background-image: url(/image/banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: #fff;
+  padding-top: 260px;
+  padding-bottom: 285px;
+}
+
+.pizza {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.title {
+  font-size: 50px;
+}
+.description {
+  font-size: 25px;
+  line-height: 30px;
+  max-width: 570px;
+  font-family: "Roboto", sans-serif;
 }
